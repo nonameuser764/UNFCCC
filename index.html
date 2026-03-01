@@ -2,66 +2,101 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Poster UNFCCC - Công ước Khung về Biến đổi Khí hậu</title>
     <style>
         :root {
-            --primary: #003366; /* Xanh Navy */
-            --accent: #C5A059;  /* Vàng đồng */
-            --bg: #fdfcf9;      /* Kem nhạt */
+            --primary: #003366;
+            --accent: #C5A059;
+            --bg: #fdfcf9;
             --text: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Times New Roman', serif;
             background-color: #d1d1d1;
-            margin: 0;
-            padding: 20px;
+            padding: 10px;
             line-height: 1.6;
         }
 
         .poster {
+            width: 100%;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 0; 
             background: var(--bg);
-            padding: 60px;
-            border: 15px double var(--primary);
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            padding: 25px 15px; 
+            border: 8px double var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
+        /* --- PHẦN TIÊU ĐỀ RA GIỮA --- */
         header {
-            text-align: center;
+            text-align: center; /* Đưa tiêu đề và 2 dòng phụ ra giữa */
             border-bottom: 2px solid var(--accent);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
         }
 
-        h1 { color: var(--primary); font-size: 3em; margin: 0; text-transform: uppercase; }
-        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 30px; font-size: 1.8em; }
-        h3 { color: var(--accent); font-variant: small-caps; font-size: 1.3em; }
+        h1 { 
+            color: var(--primary); 
+            font-size: 2.2rem; 
+            margin: 0; 
+            text-transform: uppercase;
+            line-height: 1.2;
+            display: block;
+        }
+        
+        /* --- NỘI DUNG VẪN GIỮ LỀ TRÁI --- */
+        h2 { 
+            color: var(--primary); 
+            border-left: 5px solid var(--accent); 
+            padding-left: 12px; 
+            margin: 25px 0 15px 0; 
+            font-size: 1.5rem; 
+            text-align: left;
+        }
 
         .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            width: 100%;
+            text-align: left;
         }
 
-        p { color: var(--text); margin-bottom: 15px; text-align: justify; }
+        p { 
+            color: var(--text); 
+            margin-bottom: 12px; 
+            text-align: left; 
+            font-size: 1.05rem;
+        }
 
         .highlight-box {
             background: #f0f4f8;
-            padding: 20px;
+            padding: 15px;
             border-left: 5px solid var(--primary);
             font-style: italic;
+            margin: 20px 0;
+            text-align: left;
         }
 
+        /* --- PHẦN CHÂN TRANG RA GIỮA --- */
         footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 0.9em;
+            margin-top: 40px;
+            text-align: center; /* Đưa 2 dòng cuối ra giữa */
+            font-size: 0.85rem;
             color: #7f8c8d;
             border-top: 1px solid #ccc;
-            padding-top: 20px;
+            padding-top: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .poster { padding: 15px 10px; border-width: 5px; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -70,8 +105,8 @@
 <div class="poster">
     <header>
         <h1>UNFCCC</h1>
-        <p style="font-size: 1.2em; font-weight: bold;">Công ước Khung của Liên hợp quốc về Biến đổi khí hậu</p>
-        <p><em>"Bảo vệ hệ thống khí hậu cho các thế hệ hiện nay và mai sau"</em></p>
+        <p style="font-size: 1.1rem; font-weight: bold; color: var(--primary); margin-top: 8px; text-align: center;">Công ước Khung của Liên hợp quốc về Biến đổi khí hậu</p>
+        <p style="font-style: italic; margin-top: 4px; text-align: center;">"Bảo vệ hệ thống khí hậu cho các thế hệ hiện nay và mai sau"</p>
     </header>
 
     <div class="content-grid">
